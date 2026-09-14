@@ -201,9 +201,10 @@
   @media (max-width:900px){ .portfolio-grid{ grid-template-columns:repeat(2,1fr); } }
   @media (max-width:560px){ .portfolio-grid{ grid-template-columns:1fr; } }
   .proj-card{ display:flex; flex-direction:column; }
-  .proj-tile{ aspect-ratio:1/1; border-radius:20px 20px 0 0; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; }
-  .proj-tile .mark{ font-family:"K2D",sans-serif; font-weight:700; font-size:3.5rem; color:rgba(255,255,255,.92); }
-  .proj-tile .tech{ position:absolute; bottom:14px; left:16px; right:16px; font-size:.72rem; font-weight:700; color:rgba(255,255,255,.85); letter-spacing:.04em; }
+  .proj-tile{ aspect-ratio:1/1; border-radius:20px 20px 0 0; position:relative; overflow:hidden; background:#fff; }
+  .proj-tile img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+  .proj-tile .scrim{ position:absolute; inset:auto 0 0 0; height:52%; background:linear-gradient(to top, rgba(0,0,0,.62), rgba(0,0,0,0)); pointer-events:none; }
+  .proj-tile .tech{ position:absolute; bottom:14px; left:16px; right:16px; font-size:.72rem; font-weight:700; color:rgba(255,255,255,.92); letter-spacing:.04em; text-shadow:0 1px 3px rgba(0,0,0,.5); }
   .proj-foot{ background:var(--surface-2); border-radius:0 0 14px 14px; padding:14px 18px; display:flex; justify-content:space-between; gap:10px; }
   .proj-foot .name{ font-weight:700; color:var(--text-primary); font-size:.95rem; }
   .proj-foot .cat{ font-weight:700; color:var(--text-tertiary); font-size:.85rem; white-space:nowrap; }
@@ -457,31 +458,31 @@
 
       <div class="portfolio-grid reveal" id="portfolioGrid">
         <div class="proj-card" data-cat="enterprise">
-          <div class="proj-tile" style="background:linear-gradient(135deg,#E1361F,#8C1A0F);"><span class="mark">VM</span><span class="tech">KMP · SWIFTUI · KOTLIN</span></div>
+          <div class="proj-tile"><img src="projects/virgin-mobile.png" alt="Virgin Mobile logo" loading="lazy"><span class="scrim"></span><span class="tech">KMP · SWIFTUI · KOTLIN</span></div>
           <div class="proj-foot"><span class="name">Virgin Mobile</span><span class="cat">Cross-Platform</span></div>
         </div>
         <div class="proj-card" data-cat="enterprise">
-          <div class="proj-tile" style="background:linear-gradient(135deg,#0E7C6B,#053E36);"><span class="mark">CP</span><span class="tech">SWIFT · COMBINE · RXSWIFT</span></div>
+          <div class="proj-tile"><img src="projects/careem.png" alt="Careem logo" loading="lazy"><span class="scrim"></span><span class="tech">SWIFT · COMBINE · RXSWIFT</span></div>
           <div class="proj-foot"><span class="name">Careem (CareemPay)</span><span class="cat">FinTech</span></div>
         </div>
         <div class="proj-card" data-cat="enterprise">
-          <div class="proj-tile" style="background:linear-gradient(135deg,#5B2E9E,#2C1552);"><span class="mark">SP</span><span class="tech">SWIFT · SWIFTUI · HEALTHKIT</span></div>
+          <div class="proj-tile"><img src="projects/stcpay.png" alt="stc pay logo" loading="lazy"><span class="scrim"></span><span class="tech">SWIFT · SWIFTUI · HEALTHKIT</span></div>
           <div class="proj-foot"><span class="name">stc pay (Bahrain)</span><span class="cat">FinTech</span></div>
         </div>
         <div class="proj-card" data-cat="independent">
-          <div class="proj-tile" style="background:linear-gradient(135deg,#1E88B5,#0C3B4F);"><span class="mark">ST</span><span class="tech">SWIFT · SWIFTUI · MVVM</span></div>
+          <div class="proj-tile"><img src="projects/steppin.png" alt="Steppin logo" loading="lazy"><span class="scrim"></span><span class="tech">SWIFT · SWIFTUI · MVVM</span></div>
           <div class="proj-foot"><span class="name">Steppin</span><span class="cat">HealthTech</span></div>
         </div>
         <div class="proj-card" data-cat="independent">
-          <div class="proj-tile" style="background:linear-gradient(135deg,#C4841C,#6B4408);"><span class="mark">FA</span><span class="tech">SWIFT · COMBINE · COORDINATOR</span></div>
+          <div class="proj-tile"><img src="projects/fixalert.svg" alt="Fixalert logo" loading="lazy"><span class="scrim"></span><span class="tech">SWIFT · COMBINE · COORDINATOR</span></div>
           <div class="proj-foot"><span class="name">Fixalert</span><span class="cat">Enterprise Ops</span></div>
         </div>
         <div class="proj-card" data-cat="independent">
-          <div class="proj-tile" style="background:linear-gradient(135deg,#2E9E5B,#154429);"><span class="mark">IA</span><span class="tech">SWIFT · SWIFTUI · MVVM</span></div>
+          <div class="proj-tile"><img src="projects/islam-accessible.png" alt="Islam Accessible logo" loading="lazy"><span class="scrim"></span><span class="tech">SWIFT · SWIFTUI · MVVM</span></div>
           <div class="proj-foot"><span class="name">Islam Accessible</span><span class="cat">Education</span></div>
         </div>
         <div class="proj-card" data-cat="independent">
-          <div class="proj-tile" style="background:linear-gradient(135deg,#9E2E6E,#441030);"><span class="mark">AP</span><span class="tech">SWIFT · COMBINE · MVVM</span></div>
+          <div class="proj-tile"><img src="projects/anyplay.png" alt="AnyPlay logo" loading="lazy"><span class="scrim"></span><span class="tech">SWIFT · COMBINE · MVVM</span></div>
           <div class="proj-foot"><span class="name">AnyPlay</span><span class="cat">Media</span></div>
         </div>
       </div>
